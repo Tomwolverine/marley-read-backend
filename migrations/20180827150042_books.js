@@ -1,11 +1,11 @@
 
 exports.up = function(knex, Promise) {
     return knex.schema.createTable('books', table => {
-        table.increments("id");
-        table.string("book_title");
-        table.string("book_genre");
-        table.string("book_description", 1000);
-        table.string("book_cover_url");
+        table.increments();
+        table.string("book_title", 1000);
+        table.string("book_genre", 1000);
+        table.string("book_description", 2000);
+        table.string("book_cover_url", 1000);
     });
 };
 

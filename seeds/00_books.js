@@ -1,10 +1,10 @@
 
 exports.seed = function(knex, Promise) {
   // Deletes ALL existing entries
-  return knex('authors').del()
+  return knex('books').del()
     .then(function () {
       // Inserts seed entries
-      return knex('authors').insert([
+      return knex('books').insert([
         {
           id: 1,
           book_title: "Python In A Nutshell",
@@ -50,6 +50,6 @@ exports.seed = function(knex, Promise) {
       ]);
     })
     .then (() => {
-      return knex.raw('ALTER SEQUENCE game_id_seq RESTART WITH 7;');
+      return knex.raw('ALTER SEQUENCE books_id_seq RESTART WITH 7;');
     });
 };

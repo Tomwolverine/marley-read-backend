@@ -1,11 +1,11 @@
 
 exports.up = function(knex, Promise) {
-    return knex.schema.creatTable('authors', table => {
+    return knex.schema.createTable('authors', table => {
         table.increments();
-        table.string("author_first_name");
-        table.string("author_last_name");
-        table.string("author_biography");
-        table.string("author_portrait_url");
+        table.string("author_first_name",1000);
+        table.string("author_last_name", 1000);
+        table.string("author_biography", 2000);
+        table.string("author_portrait_url", 1000);
     })
 };
 
