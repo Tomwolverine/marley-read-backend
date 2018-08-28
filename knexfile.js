@@ -4,7 +4,7 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: 'postgres:///'
+    connection: 'postgres:///galvanize-read'
   },
   production: {
     client: 'postgresql',
